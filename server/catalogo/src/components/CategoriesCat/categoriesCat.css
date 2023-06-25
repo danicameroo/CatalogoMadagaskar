@@ -1,0 +1,14 @@
+.CategoriesCat{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: start;
+    align-items: center;
+    margin-left: 160px;
+    margin-right: 160px;
+    padding: 10px;
+    overflow: hidden;
+}
+.Cat :focus{
+    background-color: aqua;
+}

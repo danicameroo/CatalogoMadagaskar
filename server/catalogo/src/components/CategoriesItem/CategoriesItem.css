@@ -1,0 +1,36 @@
+.Categories{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-left: 200px;
+    margin-right: 200px;
+    padding: 10px;
+}
+.Cat{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.subCategories{
+    display: block;
+    justify-content: center;
+    align-items: center;    
+}
+.imgCategories{
+    width: 160px;
+    height: auto;
+    border-radius: 20%;
+}
+.textCat{
+    text-align: center;
+    font-weight: 800;
+}
+.block{
+    display: block;
+}
+.titleCat{
+    padding-bottom: 60px;
+    margin-left: 180px;
+    padding-top: 20px;
+}

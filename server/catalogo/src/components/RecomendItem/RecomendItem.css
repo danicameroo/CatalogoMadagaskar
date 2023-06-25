@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist&display=swap');
+@font-face {
+    font-family: 'insaniburger';
+    src: url('../../font/insaniburger/Insanibu.ttf');
+}
+
+
+.Recomend{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.Reco{
+    background-color: #F2F2F2;
+    padding-bottom: 50px;
+}
+.contornoReco{
+    background-color: white;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 320PX;
+}
+.titleRecomend{
+    margin-left: 180px;
+    padding-top: 50px;
+    font-family: 'insaniburger';
+}
+.imgRecomend{
+    width: 300px;
+    height: auto;
+}
+.textReco{
+    text-align: center;
+    line-height: 30%;
+}
+.titleReco{
+    font-size: 20px;
+    font-weight: 800;
+}
+.descReco{
+    font-size: 18px;
+    font-weight: 600;
+    color: rgb(94, 94, 94);
+    font-family: 'Urbanist', sans-serif;
+}
+.priceReco{
+    font-size: 20px;
+    font-weight: 800;
+    color: #FF8022;
+}

@@ -1,0 +1,9 @@
+.banner{
+    margin: 10px;
+}
+.imgBanner{
+    width: 85%;
+    height: auto;
+    display:block;
+    margin:auto;
+}

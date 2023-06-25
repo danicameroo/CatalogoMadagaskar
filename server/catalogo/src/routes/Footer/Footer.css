@@ -1,0 +1,60 @@
+.Footer{
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
+    justify-content: center;
+    align-items: center;
+    height: 550px;
+    background-color: #FFB355;
+}
+.ImgLogo{
+    width: 500px;
+    height: auto;
+    margin-right: 0px;
+}
+.Contacto{
+    display: block;
+    padding-right: 0;
+    padding-bottom: 170px;
+}
+.texto{
+    width: 500px;
+}
+.lista{
+    display: flex;
+    color: white;
+}
+.blockLista{
+    display: block;
+    line-height: 5%;
+}
+.iconoFooter{
+    width: 40px;
+    height: auto;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.contactoLista{
+    text-align: center;
+    padding-right: 40px;
+    color: white;
+}
+.direFooter{
+    display: block;
+    width: 500px;
+}
+.direText{
+    text-align: start;
+    color: white;
+
+}
+.textDire{
+    width: 400px;
+    color: white;
+}
+.ubicacion{
+    width: 300px;
+    height: 250px;
+    border-radius: 10%;
+}

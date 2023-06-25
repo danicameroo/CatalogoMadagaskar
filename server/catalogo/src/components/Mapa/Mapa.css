@@ -1,0 +1,24 @@
+.mapa{
+    background-color: #FF6023;
+    height: 450px;
+}
+.tituloMapa{
+    text-align: center;
+    color: white;
+    margin: 0;
+    padding: 10px;
+    padding-top: 30px;
+}
+.Mapa{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 200px;
+    margin-right: 200px;
+    padding: 10px;
+}
+.textMapRec{
+    color: white;
+    font-size: 30px;
+}
