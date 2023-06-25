@@ -5,7 +5,6 @@ const dotenv = require("dotenv")
 const productsRoute = require("./routes/products")
 const cors = require('cors');
 app.use(cors());
-dotenv.config({path: "./vars/.env"})
 
 dotenv.config();
 mongoose
