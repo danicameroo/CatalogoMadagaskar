@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+@font-face {
+    font-family: 'insaniburger';
+    src: url('../../font/insaniburger/Insanibu.ttf');
+}
+
 .mapa{
     background-color: #FF6023;
     height: 450px;
@@ -8,6 +14,8 @@
     margin: 0;
     padding: 10px;
     padding-top: 30px;
+    font-family: 'insaniburger';
+    font-weight: 500;
 }
 .Mapa{
     display: flex;
@@ -21,4 +29,6 @@
 .textMapRec{
     color: white;
     font-size: 30px;
+    font-family: 'insaniburger';
+    font-weight: 500;
 }

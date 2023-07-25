@@ -1,14 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,800;1,900&display=swap');
+
 .CategoriesCat{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: start;
-    align-items: center;
-    margin-left: 160px;
-    margin-right: 160px;
-    padding: 10px;
-    overflow: hidden;
+  width: 84%;
+  height: 250px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: auto;
 }
-.Cat :focus{
-    background-color: aqua;
+.slider-icon-left, .slider-icon-right{
+  background: none;
+  border-radius: 100%;
+  cursor: pointer;
+}
+.slider-icon-left{
+  left: 0;
+}
+.slider-icon-right{
+  right: 0;
+}
+.slider-icon-left:hover, .slider-icon-right:hover{
+  opacity: 1;
+}
+#slider{
+  width: 100%;
+  height: 100%;
+  white-space: nowrap;
+  overflow:hidden;
+}
+#slider.active {
+  background-color: red;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  position: relative;
+}
+.slider-card{
+  width: 170px;
+  height: 70px;
+  background: none;
+  border-radius: 10px;
+  display: inline-block;
+  margin-left: 7px;
+  margin-right: 7px;
+  cursor: pointer;
+}
+.slider-card-image{
+  width: 100%;
+  height: 160px;
+  background-color: rgb(240 240 240 / 80%);
+  border-radius: 20px;
+  border-radius: 20px;
+}
+.slider-card-title{
+  font-weight: 800;
+  margin-top: 20px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+.linkCat{
+  text-decoration: none;
 }

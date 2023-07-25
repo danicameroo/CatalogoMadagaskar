@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,800;1,900&display=swap');
+@font-face {
+    font-family: 'insaniburger';
+    src: url('../../font/insaniburger/Insanibu.ttf');
+}
+
 .Categories{
     display: flex;
     flex-direction: row;
@@ -24,7 +30,9 @@
 }
 .textCat{
     text-align: center;
-    font-weight: 800;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 15px;
 }
 .block{
     display: block;
@@ -33,4 +41,10 @@
     padding-bottom: 60px;
     margin-left: 180px;
     padding-top: 20px;
+    font-family: 'insaniburger';
+    font-weight: 500;
+}
+.linkCat{
+    text-decoration: none;
+    color: black;
 }

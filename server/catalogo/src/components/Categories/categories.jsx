@@ -1,6 +1,5 @@
 import { categories } from '../../data'
 import CategoryItem from '../CategoriesItem/categoriesItem.jsx'
-import "./categories.css"
 
 
 const Categories = () => {

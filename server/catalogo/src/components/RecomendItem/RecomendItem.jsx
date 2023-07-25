@@ -1,9 +1,10 @@
 import React from 'react'
 import "./RecomendItem.css"
+import { Link } from 'react-router-dom'
 
 const RecomendItem = ({item}) => {
   return (
-    <div className='contornoReco'>
+    <Link to={`/product/${item._id}`} className='linkPro'><div className='contornoReco'>
         <div>
             <img className='imgRecomend' src={item.img}></img>
             <div className='textReco'>
@@ -12,7 +13,7 @@ const RecomendItem = ({item}) => {
               <p className='priceReco'>{item.precio}$</p>
             </div>
         </div>
-    </div>
+    </div></Link>
   )
 }
 

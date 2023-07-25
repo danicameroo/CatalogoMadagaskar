@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 
 
 const CategoriesCatMap = ({item}) => {
+  
   return (
     <div className='CatCat'>
       <Link to={`/products/${item.cat}`}><div className='subCategoriesCat'>

@@ -1,0 +1,83 @@
+.containerCat{
+    display: flex;
+    align-items: center;
+    height: 40px;
+    gap: 20px;
+    padding-top: 60px;
+    padding-bottom: 70px;
+    margin-left: 180px;
+}
+.tituloCat{
+    text-align: center;
+    color: gray;
+    margin: 0;
+    font-family: 'insaniburger';
+    font-weight: 500;
+    font-size: 32px;
+}
+.linkCatLine{
+    text-decoration: none;
+}
+.colorSubTitulo{
+    color: black;
+    font-size: 28px;
+}
+.rightIcon{
+    height: 30px;
+    width: auto;
+}
+.Orden{
+    display: flex;
+    align-items: center;
+    height: 40px;
+    padding-top: 60px;
+    padding-bottom: 70px;
+    justify-content: space-between;
+}
+.filtro{
+    display: flex;
+    align-items: center;
+    height: 40px;
+    gap: 20px;
+    padding-top: 60px;
+    padding-bottom: 70px;
+    margin-right: 180px;
+}
+.filtroSelect{
+    border: none;
+    font-size: 18px;
+    background-color: rgb(196, 196, 196);
+    padding: 10px;
+    border-radius: 10px;
+    width: 200px;
+}
+.filtrOption{
+    background-color: gray;
+    color: white;
+}
+.filtroTitle{
+    font-size: 18px;
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 500;
+}
+.Paginas{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    gap: 20px;
+    padding-top: 60px;
+}
+.boton{
+    border: none;
+    font-size: 20px;
+    background-color: rgb(196, 196, 196);
+    padding: 8px;
+    border-radius: 10px;
+    width: 120px;
+}
+.paginasTexto{
+    font-size: 22px;
+    color: gray;
+    font-family: 'Urbanist', sans-serif;
+}

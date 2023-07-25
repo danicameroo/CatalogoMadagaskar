@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist&display=swap');
+@font-face {
+    font-family: 'insaniburger';
+    src: url('../../font/insaniburger/Insanibu.ttf');
+}
+
 .imgNav{
     width: 250px;
     height: auto;
@@ -23,14 +29,16 @@
 }
 .listaNav{
     color: hwb(0 60% 100%);
-    font-size: 18px;
-    font-weight: 800;
+    font-size: 20px;
+    font-weight: 400;
     margin-left: 30px;
     margin-right: 30px;
+    font-family: 'insaniburger';
 }
-.categorias :hover{
-    color: rgb(250, 112, 0);
+.listaNav :focus-within{
+    color: black;
 }
+
 .link{
     text-decoration: none;
     color: black;
