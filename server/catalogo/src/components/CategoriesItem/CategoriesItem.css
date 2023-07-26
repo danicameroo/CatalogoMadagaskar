@@ -4,47 +4,27 @@
     src: url('../../font/insaniburger/Insanibu.ttf');
 }
 
-.Categories{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    margin-left: 200px;
-    margin-right: 200px;
-    padding: 10px;
-}
-.Cat{
+.CatItem{
     margin-left: 10px;
     margin-right: 10px;
 }
-.subCategories{
+.linkCatItem{
+    text-decoration: none;
+    color: black;
+}
+.subCatItem{
     display: block;
     justify-content: center;
     align-items: center;    
 }
-.imgCategories{
+.imgCatItem{
     width: 160px;
     height: auto;
     border-radius: 20%;
 }
-.textCat{
+.textCatItem{
     text-align: center;
     font-family: 'Montserrat', sans-serif;
     font-weight: 900;
     font-size: 15px;
-}
-.block{
-    display: block;
-}
-.titleCat{
-    padding-bottom: 60px;
-    margin-left: 180px;
-    padding-top: 20px;
-    font-family: 'insaniburger';
-    font-weight: 500;
-}
-.linkCat{
-    text-decoration: none;
-    color: black;
 }

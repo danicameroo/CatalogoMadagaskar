@@ -4,51 +4,36 @@
     src: url('../../font/insaniburger/Insanibu.ttf');
 }
 
-
-.Recomend{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
+.linkRecomend{
+    text-decoration: none;
+    color: black;
 }
-.Reco{
-    background-color: #F2F2F2;
-    padding-bottom: 50px;
-}
-.contornoReco{
+.contornoRecomend{
     background-color: white;
     margin-left: 10px;
     margin-right: 10px;
     width: 320PX;
     padding-bottom: 20px;
 }
-.titleRecomend{
-    margin-left: 180px;
-    padding-top: 50px;
-    font-family: 'insaniburger';
-    font-weight: 500;
-}
 .imgRecomend{
     width: 300px;
     height: auto;
 }
-.textReco{
+.textRecomend{
     text-align: center;
     line-height: 30%;
 }
-.titleReco{
+.titleRecomend{
     font-size: 22px;
     font-weight: 800;
 }
-.descReco{
+.descRecomend{
     font-size: 18px;
     font-weight: 600;
     color: rgb(94, 94, 94);
     font-family: 'Urbanist', sans-serif;
 }
-.priceReco{
+.priceRecomend{
     font-size: 20px;
     font-weight: 800;
     color: #FF8022;

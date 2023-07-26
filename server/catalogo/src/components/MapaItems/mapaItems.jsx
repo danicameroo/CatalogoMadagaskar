@@ -1,13 +1,13 @@
 import React from 'react'
 import './mapa.css'
 import { Link } from 'react-router-dom'
-import { useNavigate } from 'react-router-dom';
 
 
 const MapaItem = ({item}) => {
 
+  //Navegar al Id definido
   const handleClick = () => {
-    const element = document.getElementById('cat');
+    const element = document.getElementById('categories');
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
@@ -16,7 +16,7 @@ const MapaItem = ({item}) => {
   return (
     <div className='mapas'>
       <div className='subMapa'>
-      <Link to={`/products/${item.cat}`} className='linkPro'><p className='textMap'><button onClick={handleClick}>{item.title}</button></p></Link>
+        <Link to={`/products/${item.cat}`} className='linkMapa' onClick={handleClick}><p className='textMap'>{item.title}</p></Link>
       </div>
     </div>
   )

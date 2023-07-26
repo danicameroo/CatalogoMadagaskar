@@ -4,11 +4,7 @@
     src: url('../../font/insaniburger/Insanibu.ttf');
 }
 
-.imgNav{
-    width: 250px;
-    height: auto;
-}
-.Menu{
+.MenuNav{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -18,7 +14,11 @@
     padding: 30px;
     padding-bottom: 20px;
 }
-.categorias{
+.imgNav{
+    width: 250px;
+    height: auto;
+}
+.categoriesNav{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -26,6 +26,10 @@
     gap: 3em;
     align-items: center;
     justify-content: space-between;
+}
+.linkNav{
+    text-decoration: none;
+    color: black;
 }
 .listaNav{
     color: hwb(0 60% 100%);
@@ -35,11 +39,4 @@
     margin-right: 30px;
     font-family: 'insaniburger';
 }
-.listaNav :focus-within{
-    color: black;
-}
 
-.link{
-    text-decoration: none;
-    color: black;
-}

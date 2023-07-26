@@ -13,37 +13,36 @@
     height: 550px;
     background-color: #FFB355;
 }
-.ImgLogo{
+.ImgLogoFoot{
     width: 500px;
     height: auto;
     margin-right: 0px;
 }
-.Contacto{
+.contFoot{
+    height: 450px;
+}
+.contactoListaFoot{
+    text-align: center;
+    padding-right: 40px;
+    color: white;
+    font-family: 'insaniburger';
+    font-weight: 500;
+}
+.ContactoFoot{
     display: block;
     padding-right: 0;
     padding-bottom: 170px;
 }
-.texto{
-    width: 500px;
+.linkFoot{
+    text-decoration: none;
+    color: black;
 }
-.lista{
+.listaFoot{
     display: flex;
     color: white;
     font-family: 'Montserrat', sans-serif;
     font-size: 22px;
     text-decoration: none;
-}
-.listaCont{
-    display: flex;
-    color: white;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 22px;
-    text-decoration: none;
-    height: 25px;
-}
-.blockLista{
-    display: block;
-    line-height: 5%;
 }
 .iconoFooter{
     width: 45px;
@@ -52,34 +51,37 @@
     padding-top: 10px;
     padding-bottom: 10px;
 }
-.contactoLista{
-    text-align: center;
-    padding-right: 40px;
+.blockListaFoot{
+    display: block;
+    line-height: 5%;
+}
+.listaContFoot{
+    display: flex;
     color: white;
-    font-family: 'insaniburger';
-    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    text-decoration: none;
+    height: 25px;
 }
 .direFooter{
     display: block;
     width: 500px;
 }
-.direText{
+.direTextFoot{
     text-align: start;
     color: white;
     font-family: 'insaniburger';
     font-weight: 500;
 }
-.textDire{
+.textDireFoot{
     width: 400px;
     color: white;
     font-family: 'Montserrat', sans-serif;
     font-size: 22px;
 }
-.ubicacion{
+.ubicacionFoot{
     width: 300px;
     height: 250px;
     border-radius: 10%;
 }
-.contFooter{
-    height: 450px;
-}
+

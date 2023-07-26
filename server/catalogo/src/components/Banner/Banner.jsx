@@ -1,28 +1,20 @@
-import React from 'react'
-import imgBanner from "../../image/Banner.png"
-import "./Banner.css"
 import Buscador from '../../image/barraBusqueda.svg'
+import imgBanner from "../../image/Banner.png"
 import Lupa from '../../image/lupa.svg'
-import { useEffect, useState } from "react"
-import axios from 'axios'
-import ReactDOM from 'react-dom';
-import Product from '../Product/Product'
+import React from 'react'
 import { Link } from 'react-router-dom';
-import CategoryItem from '../CategoriesItem/categoriesItem.jsx'
+import "./Banner.css"
 
-function Banner({item}) {
-
- 
-
+const Banner = () => {
   return (
-      <div className='Banner'>
+      <div>
         <div className='banner'>
           <div>
-            <img className='imgBanner' src={imgBanner}></img>
-            <img src={Buscador} className='barra'/>
-            <Link to='/buscador'><input className='input'></input></Link>
-            <img className='buscarIcono' src={Lupa}></img>
-            <button className='buscar'><p className='textBuscar'>BUSCAR</p></button>
+            <img className='imgBanner' src={imgBanner} alt=''></img>
+            <img src={Buscador} className='barraBanner' alt=''/>
+            <Link to='/buscador'><input className='inputBanner'></input></Link>
+            <img className='buscarIconoBanner' src={Lupa} alt=''></img>
+            <button className='buscarBanner'><p className='textBuscarBanner'>BUSCAR</p></button>
           </div>
         </div>
       </div>

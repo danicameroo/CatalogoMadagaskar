@@ -2,11 +2,11 @@ import React from 'react'
 import "./End.css"
 import imgLogo from '../../image/madagaskarLogoBlanco.svg'
 
-function End(){
+const End = () => {
   return (
     <div className='End'>
         <div>
-            <img className='imgLogo' src={imgLogo}></img>
+            <img className='imgLogoEnd' src={imgLogo}></img>
         </div>
     </div>
   )

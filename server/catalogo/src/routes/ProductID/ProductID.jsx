@@ -1,21 +1,28 @@
-import { useLocation } from "react-router-dom"
-import CategoriesCat from "../../components/CategoriesCat/categoriesCta"
-import Right from '../../image/right-arrow.png'
-import ProductId from "../../components/ProductoId/ProductId"
 import Banner from "../../components/Banner/Banner"
-import Footer from "../Footer/Footer";
-import Mapa from "../../components/Mapa/Mapa";
-import End from "../../components/End/End";
+import CategoriesCat from "../../components/CategoriesCat/categoriesCta"
+import ProductId from "../../components/ProductId/ProductId"
+import { useEffect, useRef } from "react"
+import { useParams } from "react-router-dom"
 
 const ProductID = () => {
-    const location = useLocation()
-    const title = (location.pathname.split("/")[2])
+    const { category } = useParams();
+    const categoriesRef = useRef(null);
+
+    //Navegar al Ref
+    useEffect(()=> {
+      if(category === 'Todos' || 'Gatos' || 'Perros' || 'Alimentos' || 'Cepillos' || 'Farmacia' || 'Snacks' || 'Cosmeticos' || 'Juguetes' || 'Kennel' || 'Camas' || 'Platos' || 'Arena'){
+        categoriesRef.current.scrollIntoView({ behavior: 'smooth' });
+      }
+
+    },[])
 
   return (
     <>
     <Banner />
-    <CategoriesCat />
-    <ProductId />
+    <CategoriesCat/>
+    <div ref={categoriesRef} id="categoriesID">
+      <ProductId />
+    </div>
     </>
   )
 }

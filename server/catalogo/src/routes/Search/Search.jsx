@@ -1,24 +1,25 @@
-import React from 'react'
-import './Search.css'
-import Buscador from '../../image/barraLarga.svg'
-import Lupa from '../../image/lupa.svg'
-import { useEffect, useState, useRef  } from "react"
 import axios from 'axios'
-import Product from '../../components/Product/Product'
+import Buscador from '../../image/barraLarga.svg'
 import CategoriesCat from "../../components/CategoriesCat/categoriesCta"
-import { MdChevronLeft,MdChevronRight } from 'react-icons/md';
 import NoLupa from '../../image/lupa_no_encontrado.svg'
+import Product from '../../components/Product/Product'
+import React from 'react'
+import Lupa from '../../image/lupa.svg'
+import { MdChevronLeft,MdChevronRight } from 'react-icons/md';
+import { useEffect, useState, useRef  } from "react"
+import './Search.css'
 
 
-function Search() {
+const Search = () => {
 
   const [products, setProducts] = useState([]);
   const [product, setProduct] = useState([]);
   const [busqueda, setBusqueda] = useState('');
   const [indice, setIndice] = useState(0);
   const [resultados, setResultados] = useState(products);
+  const inputRef = useRef(null);
 
-
+  //Obtener productos
   const peticionGet=async()=>{
     await axios.get(`http://localhost:8080/api/products`)
     .then(response=>{
@@ -29,6 +30,7 @@ function Search() {
     })
   }
 
+  //setBusqueda y filtrar
   const handleChange=e=>{
     setBusqueda(e.target.value);
   }
@@ -36,6 +38,7 @@ function Search() {
     filtrar(busqueda);
   }
 
+  //Buscar al click Enter
   const handleKeyDown = (event) => {
     if (event.key === 'Enter') {
       event.preventDefault();
@@ -43,23 +46,16 @@ function Search() {
     }
   };
   
-  
-  const filtrar=(terminoBusqueda)=>{
+  //filtro de buscador
+  const filtrar = (terminoBusqueda) => {
     var resultadosBusqueda=product.filter((elemento)=>{
       if(elemento.title && elemento.title.toString().toLowerCase().includes(terminoBusqueda.toLowerCase()) || elemento.categories && elemento.categories.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())){
         return elemento
       }
     });
     setProducts(resultadosBusqueda);
-    
-    
     setResultados(resultadosBusqueda.length > 0 ? resultadosBusqueda : 'no disponible');
   };
-  
-  
-  useEffect(()=>{
-    peticionGet();
-  },[])
   
   //Botones de Siguiente y Anterior
   const avanzar = () => {
@@ -67,51 +63,55 @@ function Search() {
       setIndice(indice + 4);
     }
   };
-  
   const retroceder = () => {
     if (indice - 4 >= 0) {
       setIndice(indice - 4);
     }
   };
   
-  const inputRef = useRef(null);
+  //Obtener los productos al cargar
+  useEffect(()=>{
+    peticionGet();
+  },[])
 
+  //Mostrar busqueda
   useEffect(() => {
     inputRef.current.focus();
   }, []);
 
+  //Para mapear
   const productosActuales = resultados.slice(indice, indice + 4);
   const productosActual = products.slice(indice, indice + 4);
   
   return (
     <div className='Search'>
       <div>
-        <div className='banner'>
+        <div className='ContSe'>
           <div>
             <img src={Buscador} className='barraSe'/>
             <input className='inputSe' type='text' value={busqueda} onChange={handleChange} onKeyDown={handleKeyDown} ref={inputRef}></input>
             <img className='buscarIconoSe' src={Lupa}></img>
-            <button className='buscarSe' onClick={onClick}><p className='textBuscar'>BUSCAR</p></button>
+            <button className='buscarSe' onClick={onClick}><p className='textBuscarSe'>BUSCAR</p></button>
           </div>
         </div>
       </div>
-        <p className='titleSe'>Resultados</p>
-        {resultados && resultados !== 'no disponible' ? (
+      <p className='titleSe'>Resultados</p>
+      {resultados && resultados !== 'no disponible' ? (
         <div className='ProductSe'>
-          {indice !== 0 && <MdChevronLeft className="slidericon-left" onClick={retroceder} />}
+          {indice !== 0 && <MdChevronLeft className="slidericon-leftSe" onClick={retroceder} />}
             {productosActual.map((item) => <Product item={item} key={item.id} />)}
-          {indice + 4 < products.length && <MdChevronRight className="slidericon-right" onClick={avanzar} />}
+          {indice + 4 < products.length && <MdChevronRight className="slidericon-rightSe" onClick={avanzar} />}
         </div>
       ) : resultados === 'no disponible' ? (
-        <div className='contenedorNo'>
-          <img className='lupaImg' src={NoLupa}></img>
-          <p className='lupaText'>No hay productos que coincidan con tu busqueda</p>
+        <div className='contenedorNoSe'>
+          <img className='lupaImgSe' src={NoLupa}></img>
+          <p className='lupaTextSe'>No hay productos que coincidan con tu busqueda</p>
         </div>
       ) : (
         <div className='ProductSe'>
-          {indice !== 0 && <MdChevronLeft className="slidericon-left" onClick={retroceder} />}
+          {indice !== 0 && <MdChevronLeft className="slidericon-leftSe" onClick={retroceder} />}
             {productosActuales.map((item) => <Product item={item} key={item.id} />)}
-          {indice + 4 < products.length && <MdChevronRight className="slidericon-right" onClick={avanzar} />}
+          {indice + 4 < products.length && <MdChevronRight className="slidericon-rightSe" onClick={avanzar} />}
         </div>
       )}
         <h1 className='titleSer'>CATEGORIAS</h1>

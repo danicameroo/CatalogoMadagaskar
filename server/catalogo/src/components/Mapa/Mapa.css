@@ -26,6 +26,10 @@
     margin-right: 200px;
     padding: 10px;
 }
+.linkMapa{
+    text-decoration: none;
+    color: black;
+}
 .textMapRec{
     color: white;
     font-size: 30px;

@@ -1,16 +1,16 @@
 import { categories } from '../../data'
 import CategoryItem from '../CategoriesItem/categoriesItem.jsx'
-
+import './Categories.css'
 
 const Categories = () => {
   return (
-    <div className='block'>
-          <h1 className='titleCat'>CATEGORIAS</h1>
-          <div className='Categories'>
-              {categories.map(item =>(
-                  <CategoryItem item={item} key={item.id}/>
-              ))}
-          </div>
+    <div className='blockCats'>
+      <h1 className='titleCats'>CATEGORIAS</h1>
+      <div className='Cats'>
+          {categories.map(item =>(
+            <CategoryItem item={item} key={item.id}/>
+          ))}
+      </div>
     </div>
   )
 }

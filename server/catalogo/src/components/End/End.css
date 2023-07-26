@@ -1,7 +1,3 @@
-.imgLogo{
-    width: 100px;
-    height: auto;
-}
 .End{
     background-color: #FFB355;
     height: 150px;
@@ -10,4 +6,8 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+}
+.imgLogoEnd{
+    width: 100px;
+    height: auto;
 }

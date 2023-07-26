@@ -1,4 +1,16 @@
-.containerCat{
+.ProductsPro{
+    background-color: #F2F2F2;
+    padding-bottom: 100px;
+}
+.OrdenPro{
+    display: flex;
+    align-items: center;
+    height: 40px;
+    padding-top: 60px;
+    padding-bottom: 70px;
+    justify-content: space-between;
+}
+.containerCatPro{
     display: flex;
     align-items: center;
     height: 40px;
@@ -7,7 +19,10 @@
     padding-bottom: 70px;
     margin-left: 180px;
 }
-.tituloCat{
+.linkCatLinePro{
+    text-decoration: none;
+}
+.tituloCatPro{
     text-align: center;
     color: gray;
     margin: 0;
@@ -15,26 +30,15 @@
     font-weight: 500;
     font-size: 32px;
 }
-.linkCatLine{
-    text-decoration: none;
-}
-.colorSubTitulo{
-    color: black;
-    font-size: 28px;
-}
-.rightIcon{
+.rightIconPro{
     height: 30px;
     width: auto;
 }
-.Orden{
-    display: flex;
-    align-items: center;
-    height: 40px;
-    padding-top: 60px;
-    padding-bottom: 70px;
-    justify-content: space-between;
+.colorSubTituloPro{
+    color: black;
+    font-size: 28px;
 }
-.filtro{
+.filtroPro{
     display: flex;
     align-items: center;
     height: 40px;
@@ -43,7 +47,12 @@
     padding-bottom: 70px;
     margin-right: 180px;
 }
-.filtroSelect{
+.filtroTitlePro{
+    font-size: 18px;
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 500;
+}
+.filtroSelectPro{
     border: none;
     font-size: 18px;
     background-color: rgb(196, 196, 196);
@@ -51,16 +60,22 @@
     border-radius: 10px;
     width: 200px;
 }
-.filtrOption{
+.filtrOptionPro{
     background-color: gray;
     color: white;
 }
-.filtroTitle{
-    font-size: 18px;
-    font-family: 'Urbanist', sans-serif;
-    font-weight: 500;
+.productsPro{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 10px;
+    margin-left: 40px;
+    margin-right: 40px;
 }
-.Paginas{
+.PaginasPro{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -68,7 +83,7 @@
     gap: 20px;
     padding-top: 60px;
 }
-.boton{
+.botonPro{
     border: none;
     font-size: 20px;
     background-color: rgb(196, 196, 196);
@@ -76,7 +91,7 @@
     border-radius: 10px;
     width: 120px;
 }
-.paginasTexto{
+.paginasTextoPro{
     font-size: 22px;
     color: gray;
     font-family: 'Urbanist', sans-serif;

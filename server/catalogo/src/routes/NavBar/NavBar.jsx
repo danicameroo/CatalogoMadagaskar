@@ -1,29 +1,30 @@
-import {NavLink} from 'react-router-dom';
-import "./NavBar.css"
 import LogoNav from '../../image/madagaskarLogoAColor.svg'
+import { Link } from "react-router-dom";
+import "./NavBar.css"
 
-function NavBar(id){
+const NavBar = () => {    
+
+    //Navegar al Id definido
     const handleClick = () => {
-        const element = document.getElementById(id);
+        const element = document.getElementById('categories');
         if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
+            element.scrollIntoView({ behavior: 'smooth' });
         }
-        console.log(element)
-        console.log(id)
-      };
+    };
 
     return(
-        <div className='Menu'>
+        <div className='MenuNav'>
             <img src={LogoNav} className='imgNav' alt='' />
             <div>
-                <ul className='categorias'>
-                    <NavLink className='link' to='/'><li className='listaNav'>INICIO</li></NavLink>
-                    <button onClick={handleClick}><NavLink className='link' to={`/products/Todos#${id}`}><li className='listaNav'>CATEGORIAS</li></NavLink></button>
-                    <NavLink className='link' to='/categoria/Romance'><li className='listaNav'>CONTACTO</li></NavLink>
+                <ul className='categoriesNav' >
+                    <Link className='linkNav' to='/'><li className='listaNav'>INICIO</li></Link>
+                    <Link className='linkNav' to='/products/Todos' onClick={handleClick}><li className='listaNav'>CATEGORIAS</li></Link>
+                    <Link className='linkNav' to='/categoria/Romance'><li className='listaNav'>CONTACTO</li></Link>
                 </ul>
             </div>
         </div>
     );
+
 };
 
 export default NavBar
