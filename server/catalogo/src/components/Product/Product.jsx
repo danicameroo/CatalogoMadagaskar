@@ -15,7 +15,7 @@ const Product = ({item}) => {
   return (
     <Link to={`/product/${item._id}`} className='linkPr' onClick={handleClick}>
       <div className='contornoPr'>
-          <img className='imgPr' src={item.img} alt=''></img>
+          <img className='imgPr' src={item.img[0]} alt=''></img>
           <div className='textPr'>
             <p className='titlePr'>{item.title}</p>
             <p className='subPr'>Producto para Mascota</p>

@@ -88,25 +88,24 @@ const Products = ( ) => {
                 <option key={opcion.value} value={opcion.value} className='filtrOptionPro'>
                   {opcion.label}
                 </option>
-              ))}
+              ))} 
             </select>
           </div>
       </div>
       <div className='productsPro'>
-        {productosActuales.map((producto) => (
-          <Product item={producto} key={producto.id}/>
-        ))}
+          {productosActuales.map((producto) => (
+            <Product item={producto} key={producto.id}/>
+          ))}
       </div>
       <div className='PaginasPro'>
-        <button className='botonPro' onClick={retroceder} disabled={indice === 0}>
-          Anterior
-        </button>
+      {indice !== 0 && <button className='botonPro' onClick={retroceder} disabled={indice === 0}>Anterior
+        </button>}
         <p className='paginasTextoPro'>
           {paginaActual} de {paginasTotales}
         </p>
-        <button className='botonPro' onClick={avanzar} disabled={indice + 12 >= products.length}>
+        {indice + 12 < productosFiltrados.length && (<button className='botonPro' onClick={avanzar} disabled={indice + 12 >= products.length}>
           Siguiente
-        </button>
+        </button>)}
       </div>
     </div>
   )

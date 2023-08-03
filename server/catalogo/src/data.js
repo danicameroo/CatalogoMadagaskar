@@ -1,15 +1,15 @@
-import Perro from './image/Perro.png'
-import Gato from './image/5.png'
-import Alimento from './image/11.png'
-import Cepillos from './image/9.png'
-import Farmacia from './image/6.png'
-import Snacks from './image/1.png'
-import Cosmeticos from './image/7.png'
-import Juguetes from './image/4.png'
-import Kennel from './image/3.png'
-import Camas from './image/8.png'
-import Platos from './image/2.png'
-import Arena from './image/10.png'
+import Alimento from './image/Alimento.svg'
+import Arena from './image/Arena.svg'
+import Camas from './image/Cama.svg'
+import Cepillos from './image/Cepillos.svg'
+import Cosmeticos from './image/Cosmeticos.svg'
+import Farmacia from './image/Farmacia.svg'
+import Gato from './image/Gato.svg'
+import Juguetes from './image/Juguetes.svg'
+import Kennel from './image/Kennel.svg'
+import Perro from './image/Perro.svg'
+import Platos from './image/Plato.svg'
+import Snacks from './image/Snacks.svg'
 import Recomend from './image/Recomend.webp'
 
 export const categories = [
@@ -51,7 +51,7 @@ export const categories = [
     },
     {
         id: 7,
-        img: Cosmeticos,
+        img: Snacks,
         title: "COSMETICOS",
         cat: "Cosmeticos",
     },

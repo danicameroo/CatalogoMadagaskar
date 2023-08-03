@@ -4,37 +4,155 @@
     src: url('../../font/insaniburger/Insanibu.ttf');
 }
 
-.linkRecomend{
-    text-decoration: none;
-    color: black;
+@media (min-width: 1024px) {
+    .linkRecomend{
+        text-decoration: none;
+        color: black;
+    }
+    .contornoRecomend{
+        background-color: white;
+        margin-left: 10px;
+        margin-right: 10px;
+        width: 320PX;
+        padding-bottom: 20px;
+    }
+    .imgRecomend{
+        width: 300px;
+        height: auto;
+    }
+    .textRecomend{
+        text-align: center;
+        line-height: 30%;
+    }
+    .titleRecomend{
+        font-size: 22px;
+        font-weight: 800;
+    }
+    .descRecomend{
+        font-size: 18px;
+        font-weight: 600;
+        color: rgb(94, 94, 94);
+        font-family: 'Urbanist', sans-serif;
+    }
+    .priceRecomend{
+        font-size: 20px;
+        font-weight: 800;
+        color: #FF8022;
+    }
 }
-.contornoRecomend{
-    background-color: white;
-    margin-left: 10px;
-    margin-right: 10px;
-    width: 320PX;
-    padding-bottom: 20px;
+
+@media (min-width: 650px) and (max-width: 799px) {
+    .linkRecomend{
+        text-decoration: none;
+        color: black;
+    }
+    .contornoRecomend{
+        background-color: white;
+        margin-left: 10px;
+        margin-right: 10px;
+        width: 250PX;
+        padding-bottom: 15px;
+        margin-bottom: 20px;
+    }
+    .imgRecomend{
+        width: 250px;
+        height: auto;
+    }
+    .textRecomend{
+        text-align: center;
+        line-height: 30%;
+    }
+    .titleRecomend{
+        font-size: 22px;
+        font-weight: 800;
+    }
+    .descRecomend{
+        font-size: 18px;
+        font-weight: 600;
+        color: rgb(94, 94, 94);
+        font-family: 'Urbanist', sans-serif;
+    }
+    .priceRecomend{
+        font-size: 20px;
+        font-weight: 800;
+        color: #FF8022;
+    }
 }
-.imgRecomend{
-    width: 300px;
-    height: auto;
+
+@media (min-width: 800px) and (max-width: 1024px) {
+    .linkRecomend{
+        text-decoration: none;
+        color: black;
+    }
+    .contornoRecomend{
+        background-color: white;
+        margin-left: 40px;
+        margin-right: 40px;
+        width: 280PX;
+        padding-bottom: 15px;
+        margin-bottom: 20px;
+    }
+    .imgRecomend{
+        width: 280px;
+        height: auto;
+    }
+    .textRecomend{
+        text-align: center;
+        line-height: 30%;
+    }
+    .titleRecomend{
+        font-size: 22px;
+        font-weight: 800;
+    }
+    .descRecomend{
+        font-size: 18px;
+        font-weight: 600;
+        color: rgb(94, 94, 94);
+        font-family: 'Urbanist', sans-serif;
+    }
+    .priceRecomend{
+        font-size: 20px;
+        font-weight: 800;
+        color: #FF8022;
+    }
 }
-.textRecomend{
-    text-align: center;
-    line-height: 30%;
-}
-.titleRecomend{
-    font-size: 22px;
-    font-weight: 800;
-}
-.descRecomend{
-    font-size: 18px;
-    font-weight: 600;
-    color: rgb(94, 94, 94);
-    font-family: 'Urbanist', sans-serif;
-}
-.priceRecomend{
-    font-size: 20px;
-    font-weight: 800;
-    color: #FF8022;
+
+@media (min-width: 300px) and (max-width:425px){
+    .linkRecomend{
+        text-decoration: none;
+        color: black;
+    }
+    .contornoRecomend{
+        background-color: white;
+        margin-left: 10px;
+        margin-right: 10px;
+        width: 140PX;
+        padding-bottom: 20px;
+        margin-bottom: 10px;
+    }
+    .imgRecomend{    
+        display: block;
+        margin: auto;
+        width: 110px;
+        height: auto;
+    }
+    .textRecomend{
+        text-align: center;
+        line-height: 30%;
+    }
+    .titleRecomend{
+        font-size: 10px;
+        font-weight: 800;
+    }
+    .descRecomend{
+        font-size: 7px;
+        font-weight: 600;
+        color: rgb(94, 94, 94);
+        font-family: 'Urbanist', sans-serif;
+    }
+    .priceRecomend{
+        font-size: 10px;
+        font-weight: 800;
+        color: #FF8022;
+    }
 }

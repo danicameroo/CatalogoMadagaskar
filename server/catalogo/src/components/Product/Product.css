@@ -4,37 +4,117 @@
     src: url('../../font/insaniburger/Insanibu.ttf');
 }
 
-.linkPr{
-    text-decoration: none;
-    color: black;
+@media (min-width: 1024px) {
+    .linkPr{
+        text-decoration: none;
+        color: black;
+    }
+    .contornoPr{
+        background-color: white;
+        margin-left: 0;
+        margin-right: 0;
+        width: 330PX;
+        height: 450px;
+    }
+    .imgPr{
+        width: 320px;
+        height: auto;
+    }
+    .textPr{
+        text-align: center;
+        line-height: 30%;
+    }
+    .titlePr{
+        font-size: 22px;
+        font-weight: 800;
+    }
+    .subPr{
+        font-size: 19px;
+        font-weight: 600;
+        color: rgb(94, 94, 94);
+        font-family: 'Urbanist', sans-serif;
+    }
+    .pricePr{
+        font-size: 22px;
+        font-weight: 800;
+        color: #FF8022;
+    }
 }
-.contornoPr{
-    background-color: white;
-    margin-left: 0;
-    margin-right: 0;
-    width: 330PX;
-    height: 450px;
+
+@media (min-width: 650px) and (max-width: 1024px) {
+    .linkPr{
+        text-decoration: none;
+        color: black;
+    }
+    .contornoPr{
+        background-color: white;
+        margin-left: 0;
+        margin-right: 0;
+        width: 200PX;
+        height: 300px;
+    }
+    .imgPr{
+        width: 180px;
+        height: auto;
+    }
+    .textPr{
+        text-align: center;
+        line-height: 30%;
+    }
+    .titlePr{
+        font-size: 18px;
+        font-weight: 800;
+        line-height: 100%;
+    }
+    .subPr{
+        font-size: 15px;
+        font-weight: 600;
+        color: rgb(94, 94, 94);
+        font-family: 'Urbanist', sans-serif;
+    }
+    .pricePr{
+        font-size: 19px;
+        font-weight: 800;
+        color: #FF8022;
+    }
 }
-.imgPr{
-    width: 320px;
-    height: auto;
-}
-.textPr{
-    text-align: center;
-    line-height: 30%;
-}
-.titlePr{
-    font-size: 22px;
-    font-weight: 800;
-}
-.subPr{
-    font-size: 19px;
-    font-weight: 600;
-    color: rgb(94, 94, 94);
-    font-family: 'Urbanist', sans-serif;
-}
-.pricePr{
-    font-size: 22px;
-    font-weight: 800;
-    color: #FF8022;
+
+@media (min-width: 300px) and (max-width:425px){
+    .linkPr{
+        text-decoration: none;
+        color: black;
+    }
+    .contornoPr{
+        background-color: white;
+        margin-left: 0;
+        margin-right: 0;
+        width: 85PX;
+        height: 140px;
+    }
+    .imgPr{
+        width: 70px;
+        height: auto;
+    }
+    .textPr{
+        text-align: center;
+        line-height: 15%;
+    }
+    .titlePr{
+        font-size: 10px;
+        word-wrap: break-all;
+        font-weight: 800;
+        line-height: 95%;
+
+    }
+    .subPr{
+        font-size: 7px;
+        font-weight: 600;
+        color: rgb(94, 94, 94);
+        font-family: 'Urbanist', sans-serif;
+    }
+    .pricePr{
+        font-size: 10px;
+        font-weight: 800;
+        color: #FF8022;
+    }
 }

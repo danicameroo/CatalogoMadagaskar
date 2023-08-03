@@ -3,10 +3,12 @@ import Product from "../../components/Product/Product";
 import Right from "../../image/right-arrow.png";
 import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 import { publicRequest } from "../../requestMethod";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 import "./ProductId.css";
+import Pasar from "../../image/botonPasar.svg"
+import Retroceder from "../../image/Retroceder.png"
 
 const ProductId = () => {
 
@@ -15,6 +17,7 @@ const ProductId = () => {
   const [product, setProduct] = useState({});
   const [products, setProducts] = useState([]);
   const [indice, setIndice] = useState(0);
+  const sliderRefId = useRef(null);
   
   
   //Filtrar productos recomendados
@@ -22,7 +25,7 @@ const ProductId = () => {
     if (!producto.title) {
       return false;
     }
-    const firstWord = product.title.split(" ")[0];
+    const firstWord = product.title ? product.title.split(" ")[0] : "";
     const sameFirstWord = producto.title
     .toLowerCase()
       .startsWith(firstWord.toLowerCase());
@@ -41,6 +44,24 @@ const ProductId = () => {
     if (indice - 4 >= 0) {
       setIndice(indice - 4);
     }
+  };
+
+  const slideLeft = () => {
+    const slider = sliderRefId.current;
+    const newPos = slider.scrollLeft + 1500;
+    slider.scrollTo({
+      left: newPos,
+      behavior: "smooth"
+    });
+  };
+
+  const slideRight = () => {
+    const slider = sliderRefId.current;
+    const newPos = slider.scrollLeft - 1500;
+    slider.scrollTo({
+      left: newPos,
+      behavior: "smooth"
+    });
   };
 
   //Obtener productos por ID
@@ -81,8 +102,22 @@ const ProductId = () => {
         <p className="tituloCatId colorSubTituloId">Producto</p>
       </div>
       <div className="ProductId">
-        <div className="containerIdUno">
-          <img src={product.img} className="imgProductId" alt=""/>
+        <div className="containerIdUno" >
+          {product.img?.length > 1 ? (
+            <>
+            <div className="imgContId" ref={sliderRefId}>
+              {product.img.map((item) => (
+                  <img src={item} className="imgProductCarrId"  alt="" />
+              ))}
+              </div>
+              <div className="slider-imgContId">
+                <img src={Retroceder} className="slider-imgId" onClick={slideRight}/>
+                <img src={Pasar} className="slider-imgId" onClick={slideLeft}/>
+              </div>
+            </>
+            ) : (
+            <img src={product.img} className="imgProductId" alt="" />
+          )}
         </div>
         <div className="containerIdDos">
           <div className="containerTextId">
@@ -117,7 +152,7 @@ const ProductId = () => {
     </div>
     <div className="ProductSeId">
       {indice !== 0 && <MdChevronLeft className="slidericon-leftId" onClick={retroceder} />}
-        {productosActual.map((item) => (
+        {productosActual.map((item) => (  
           <Product item={item} key={item.id}/>
         ))}
       {indice + 4 < filteredProducts.length && (<MdChevronRight className="slidericon-rightId" onClick={avanzar} />)}

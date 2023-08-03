@@ -1,14 +1,16 @@
 import React from 'react'
-import "./CategoriesItem.css"
 import { Link } from 'react-router-dom'
+import "./CategoriesItem.css"
 
 
 const CategoryItem = ({item}) => {
   return (
     <div className='CatItem'>
-      <Link to={`/products/${item.cat}`} className='linkCatItem active'>
+      <Link to={`/products/${item.cat}`} className='linkCatItem'>
         <div className='subCatItem'>
-          <img className='imgCatItem' alt='' src={item.img} />
+          <div className='containerImgCat'>
+            <img className='imgCatItem' alt='' src={item.img} />
+          </div>
           <p className='textCatItem'>{item.title}</p>
         </div>
       </Link>
