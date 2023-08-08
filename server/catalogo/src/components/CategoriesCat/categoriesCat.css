@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,800;1,900&display=swap');
 
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
+  :root {
+    --slide-amount: 1200;
+  }
   .CategoriesCat{
     width: 84%;
     height: 250px;
@@ -73,8 +76,11 @@
 }
 
 @media (min-width: 650px) and (max-width: 1024px) {
+  :root {
+    --slide-amount: 500;
+  }
   .CategoriesCat{
-    width: 86%;
+    width: 88%;
     height: 200px;
     position: relative;
     display: flex;
@@ -147,6 +153,9 @@
 }
 
 @media (min-width: 300px) and (max-width:399px){
+  :root {
+    --slide-amount: 220;
+  }
   .CategoriesCat{
     width: 83%;
     height: 80px;
@@ -222,6 +231,9 @@
 }
 
 @media (min-width: 400px) and (max-width:499px){
+  :root {
+    --slide-amount: 220;
+  }
   .CategoriesCat{
     width: 80%;
     height: 80px;

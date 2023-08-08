@@ -1,4 +1,7 @@
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
+    :root {
+        --slide-two: 700;
+    }
     .ProductIdCont{
         background-color: #F2F2F2;
     }
@@ -104,6 +107,14 @@
         font-size: 40px;
         font-weight: 800;
         color: #FF8022;
+        margin-bottom: 0;
+    }
+    .priceTwoProductId{
+        font-size: 40px;
+        font-weight: 800;
+        color: #FF8022;
+        margin-bottom: 0;
+        margin-top: 0;
     }
     .containerSelectId{
         margin-top: 10px;
@@ -157,7 +168,7 @@
         opacity: 1;
     }
     .slider-imgId{
-        width: 50px;
+        width: 100px;
         position: relative;
         top: 30px;
     }
@@ -172,6 +183,9 @@
 }
 
 @media (min-width: 650px) and (max-width: 1024px) {
+    :root {
+        --slide-two: 340;
+    }
     .ProductIdCont{
         background-color: #F2F2F2;
     }
@@ -209,13 +223,13 @@
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-        padding: 10px;
+        padding: 5px;
         gap: 5px;
         padding-bottom: 20px;
         align-items: flex-start;
     }
     .containerIdUno{
-        width: 350px;
+        width: 340px;
         height: 400px;
         background-color: white;
         position: relative;
@@ -277,6 +291,13 @@
         font-size: 25px;
         font-weight: 800;
         color: #FF8022;
+    }
+    .priceTwoProductId{
+        font-size: 25px;
+        font-weight: 800;
+        color: #FF8022;
+        margin-bottom: 0;
+        margin-top: 0;
     }
     .containerSelectId{
         margin-top: 10px;
@@ -345,6 +366,9 @@
 }
 
 @media (min-width: 300px) and (max-width:425px){
+    :root {
+        --slide-two: 160;
+    }
     .ProductIdCont{
         background-color: #F2F2F2;
     }
@@ -451,6 +475,13 @@
         font-size: 10px;
         font-weight: 800;
         color: #FF8022;
+    }
+    .priceTwoProductId{
+        font-size: 10px;
+        font-weight: 800;
+        color: #FF8022;
+        margin-bottom: 0;
+        margin-top: 0;
     }
     .containerSelectId{
         margin-top: 10px;

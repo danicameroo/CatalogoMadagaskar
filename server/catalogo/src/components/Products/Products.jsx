@@ -9,34 +9,18 @@ import './Products.css'
 const Products = ( ) => {
   const location = useLocation()
   const cat = (location.pathname.split("/")[2])
-  const [orden, setOrden] = useState('Menor precio');
+  const [orden, setOrden] = useState('Orden');
   const [products, setProducts] = useState([]);
   const [indice, setIndice] = useState(0);
-
-  const paginaActual = Math.floor(indice / 12) + 1;
-  const paginasTotales = Math.ceil(products.length / 12);
-
-  //Traer productos de mongo
-  useEffect(()=>{
-    const getProducts = async () => {
-      try {
-        const res = await axios.get(cat ? `http://localhost:8080/api/products?category=${cat}` : `http://localhost:8080/api/products`);
-        setProducts(res.data);
-      } catch(err){
-        console.log(err)
-      }
-    };
-    getProducts()
-    
-  },[cat]);
+  const [paginaActual, setPaginaActual] = useState(1);
 
   //Opciones del filtro
   const opcionesOrden = [
-    { value: ' ', label: 'Precio' },
+    { value: 'Orden', label: 'Orden' },
+    { value: 'Perros', label: 'Perro' },
+    { value: 'Gatos', label: 'Gato' },
     { value: 'ascendente', label: 'Menor precio' },
     { value: 'descendente', label: 'Mayor precio' },
-    { value: 'Gatos', label: 'Gato' },
-    { value: 'Perros', label: 'Perro' },
   ];
 
   //Funcion del filtro
@@ -63,19 +47,56 @@ const Products = ( ) => {
 
   //Botones de Siguiente y Anterior
   const avanzar = () => {
-    if (indice + 12 < products.length) {
+    if (indice + 12 < productosFiltrados.length) {
       setIndice(indice + 12);
+      setPaginaActual(paginaActual + 1);
+    }
+
+    //Navegar al ID definido
+    const element = document.getElementById('categories');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
     }
   };
   const retroceder = () => {
     if (indice - 12 >= 0) {
       setIndice(indice - 12);
+      setPaginaActual(paginaActual - 1);
+    }
+
+    //Navegar al ID definido
+    const element = document.getElementById('categories');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
+  //Traer productos de mongo
+  useEffect(() => {
+    const getProducts = async () => {
+      try {
+        const res = await axios.get(
+          cat ? `http://localhost:8080/api/products?category=${cat}` : 'http://localhost:8080/api/products'
+        );
+        setProducts(res.data);
+        setPaginaActual(1); // Restablecer la página actual a 1
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    getProducts();
+  }, [cat]);
+
+  useEffect(() => {
+    setIndice(0); // Volver a la primera página al cambiar de categoría
+    setOrden('Orden'); // Restablecer el orden a "Orden"
+    setPaginaActual(1);
+  }, [cat]);
+
   //Para mapear
   const productosFiltrados = ordenarProductos(products, orden);
-  const productosActuales = productosFiltrados.slice(indice, indice + 12);
+  const productosStock = productosFiltrados.filter((products) => products.stock > 0);
+  const productosActuales = productosStock.slice(indice, indice + 12);
 
   return (
     <div className='ProductsPro'>
@@ -101,7 +122,7 @@ const Products = ( ) => {
       {indice !== 0 && <button className='botonPro' onClick={retroceder} disabled={indice === 0}>Anterior
         </button>}
         <p className='paginasTextoPro'>
-          {paginaActual} de {paginasTotales}
+          {paginaActual} de {Math.ceil(productosStock.length / 12)}
         </p>
         {indice + 12 < productosFiltrados.length && (<button className='botonPro' onClick={avanzar} disabled={indice + 12 >= products.length}>
           Siguiente

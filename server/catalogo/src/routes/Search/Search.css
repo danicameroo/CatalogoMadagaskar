@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,800;1,900&display=swap');
 
-@media (min-width: 1224px) {
+@media (min-width: 1225px) {
     .Search{
         background: linear-gradient(180deg, white, #FFB355);
     }

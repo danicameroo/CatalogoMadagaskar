@@ -4,7 +4,7 @@
     src: url('../../font/insaniburger/Insanibu.ttf');
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
     .mapa{
         background-color: #FF6023;
         height: 450px;

@@ -34,8 +34,8 @@ export const categories = [
     {
         id: 4,
         img: Cepillos,
-        title: "CEPILLOS",
-        cat: "Cepillos",
+        title: "MISCELANEOS",
+        cat: "Miscelaneos",
     },
     {
         id: 5,
@@ -51,7 +51,7 @@ export const categories = [
     },
     {
         id: 7,
-        img: Snacks,
+        img: Cosmeticos,
         title: "COSMETICOS",
         cat: "Cosmeticos",
     },

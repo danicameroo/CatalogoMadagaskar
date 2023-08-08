@@ -13,8 +13,7 @@ const ProductID = () => {
       if(category === 'Todos' || 'Gatos' || 'Perros' || 'Alimentos' || 'Cepillos' || 'Farmacia' || 'Snacks' || 'Cosmeticos' || 'Juguetes' || 'Kennel' || 'Camas' || 'Platos' || 'Arena'){
         categoriesRef.current.scrollIntoView({ behavior: 'smooth' });
       }
-
-    },[])
+    }, [category])
 
   return (
     <>

@@ -21,17 +21,24 @@ const ProductId = () => {
   
   
   //Filtrar productos recomendados
-  const filteredProducts = products.filter((producto) => {
-    if (!producto.title) {
-      return false;
-    }
-    const firstWord = product.title ? product.title.split(" ")[0] : "";
-    const sameFirstWord = producto.title
-    .toLowerCase()
-      .startsWith(firstWord.toLowerCase());
+    const filteredProducts = products.filter((producto) => {
+      if (!producto.brand) {
+        return false;
+      }
+    
+      const currentProductTitleWords = product.brand.toLowerCase().split(" ");
+      const otherProductTitleWords = producto.brand.toLowerCase().split(" ");
+    
+      // Verificar si al menos una palabra en el título del otro producto se parece a una palabra en el título del producto actual
+      const hasSimilarWord = currentProductTitleWords.some((currentWord) => {
+        return otherProductTitleWords.some((otherWord) => {
+          return currentWord.includes(otherWord) || otherWord.includes(currentWord);
+        });
+      });
+
       const isSameProduct = producto._id === product._id;
-      
-      return sameFirstWord && !isSameProduct;
+    
+      return hasSimilarWord && !isSameProduct;
     });
   
     //Botones de Siguiente y Anterior
@@ -48,7 +55,7 @@ const ProductId = () => {
 
   const slideLeft = () => {
     const slider = sliderRefId.current;
-    const newPos = slider.scrollLeft + 1500;
+    const newPos = slider.scrollLeft + parseInt(getComputedStyle(document.documentElement).getPropertyValue('--slide-two'));
     slider.scrollTo({
       left: newPos,
       behavior: "smooth"
@@ -57,7 +64,7 @@ const ProductId = () => {
 
   const slideRight = () => {
     const slider = sliderRefId.current;
-    const newPos = slider.scrollLeft - 1500;
+    const newPos = slider.scrollLeft - parseInt(getComputedStyle(document.documentElement).getPropertyValue('--slide-two'));
     slider.scrollTo({
       left: newPos,
       behavior: "smooth"
@@ -91,7 +98,8 @@ const ProductId = () => {
   }, [product]);
   
   //para mapear
-  const productosActual = filteredProducts.slice(indice, indice + 4);
+  const productosStock = filteredProducts.filter((products) => products.stock > 0);
+  const productosActual = productosStock.slice(indice, indice + 4);
   return (
     <div className="ProductIdCont">
       <div className="containerCatId">
@@ -111,8 +119,8 @@ const ProductId = () => {
               ))}
               </div>
               <div className="slider-imgContId">
-                <img src={Retroceder} className="slider-imgId" onClick={slideRight}/>
-                <img src={Pasar} className="slider-imgId" onClick={slideLeft}/>
+                <img src={Retroceder} className="slider-imgId" onClick={slideRight} alt=""/>
+                <img src={Pasar} className="slider-imgId" onClick={slideLeft} alt=""/>
               </div>
             </>
             ) : (
@@ -125,7 +133,11 @@ const ProductId = () => {
               <h1 className="titleProductId">{product.title}</h1>
               <p className="subtitleProductId">{product.subtitle}</p>
               <p className="descProductId">{product.desc}</p>
+              {product.comp && product.comp.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
               <p className="priceProductId">{product.price}$</p>
+              <p className="priceTwoProductId">{product.priceTwo}</p>
             </div>
         </div>
         <div className="containerSelectId">
