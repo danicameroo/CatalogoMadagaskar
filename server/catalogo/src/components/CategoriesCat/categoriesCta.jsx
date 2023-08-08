@@ -45,6 +45,9 @@ const CategoriesCat = () => {
     if (sliderRef.current) {
       const sliderWidth = sliderRef.current.scrollWidth;
       setSliderWidth(sliderWidth);
+
+      const currentPos = sliderRef.current.scrollLeft;
+      setSliderPos(currentPos);
     }
   }, []);
 

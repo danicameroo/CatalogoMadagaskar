@@ -19,7 +19,7 @@ const ProductID = () => {
     <>
     <Banner />
     <CategoriesCat/>
-    <div ref={categoriesRef} id="categoriesID">
+    <div ref={categoriesRef} id="categoriesID" >
       <ProductId />
     </div>
     </>
