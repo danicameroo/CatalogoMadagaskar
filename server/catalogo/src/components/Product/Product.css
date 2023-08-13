@@ -13,26 +13,29 @@
         background-color: white;
         margin-left: 0;
         margin-right: 0;
-        width: 330PX;
+        width: 300PX;
         height: 450px;
     }
     .imgPr{
-        width: 320px;
+        width: 300px;
         height: auto;
     }
     .textPr{
         text-align: center;
-        line-height: 30%;
     }
     .titlePr{
         font-size: 22px;
         font-weight: 800;
+        line-height: 100%;
+        margin: 5px;
     }
     .subPr{
         font-size: 19px;
         font-weight: 600;
         color: rgb(94, 94, 94);
         font-family: 'Urbanist', sans-serif;
+        margin: 5px;
+        line-height: 100%;
     }
     .pricePr{
         font-size: 22px;
@@ -59,23 +62,26 @@
     }
     .textPr{
         text-align: center;
-        line-height: 30%;
     }
     .titlePr{
         font-size: 18px;
         font-weight: 800;
         line-height: 100%;
+        margin: 0;
     }
     .subPr{
         font-size: 15px;
         font-weight: 600;
         color: rgb(94, 94, 94);
         font-family: 'Urbanist', sans-serif;
+        margin: 0;
+        line-height: 100%;
     }
     .pricePr{
         font-size: 19px;
         font-weight: 800;
         color: #FF8022;
+        margin: 0;
     }
 }
 
@@ -97,24 +103,26 @@
     }
     .textPr{
         text-align: center;
-        line-height: 15%;
     }
     .titlePr{
         font-size: 10px;
         word-wrap: break-all;
         font-weight: 800;
-        line-height: 95%;
-
+        line-height: 100%;
+        margin: 0;
     }
     .subPr{
         font-size: 7px;
         font-weight: 600;
         color: rgb(94, 94, 94);
         font-family: 'Urbanist', sans-serif;
+        line-height: 100%;
+        margin: 0;
     }
     .pricePr{
         font-size: 10px;
         font-weight: 800;
         color: #FF8022;
+        margin: 0;
     }
 }

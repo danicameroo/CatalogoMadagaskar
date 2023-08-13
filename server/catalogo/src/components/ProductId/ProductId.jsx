@@ -17,6 +17,9 @@ const ProductId = () => {
   const [product, setProduct] = useState({});
   const [products, setProducts] = useState([]);
   const [indice, setIndice] = useState(0);
+  const [showSlideLeftButton, setShowSlideLeftButton] = useState(true);
+  const [showSlideRightButton, setShowSlideRightButton] = useState(true);
+  const [currentSlide, setCurrentSlide] = useState(0);  
   const sliderRefId = useRef(null);
   
   
@@ -60,6 +63,13 @@ const ProductId = () => {
       left: newPos,
       behavior: "smooth"
     });
+
+    const lastImageIndex = product.img.length - 1;
+    if (newPos >= lastImageIndex * parseInt(getComputedStyle(document.documentElement).getPropertyValue('--slide-two'))) {
+      setShowSlideLeftButton(false);
+    }
+    setCurrentSlide(currentSlide + 1);
+    setShowSlideRightButton(true);
   };
 
   const slideRight = () => {
@@ -69,6 +79,8 @@ const ProductId = () => {
       left: newPos,
       behavior: "smooth"
     });
+    setCurrentSlide(currentSlide - 1);
+    setShowSlideLeftButton(true);
   };
 
   //Obtener productos por ID
@@ -96,6 +108,13 @@ const ProductId = () => {
     };
     peticionGet();
   }, [product]);
+
+  useEffect(() => {
+    const scrollPosition = localStorage.getItem('scrollPosition');
+    if (scrollPosition) {
+      window.scrollTo(0, parseInt(scrollPosition));
+    }
+  }, []);
   
   //para mapear
   const productosStock = filteredProducts.filter((products) => products.stock > 0);
@@ -119,8 +138,8 @@ const ProductId = () => {
               ))}
               </div>
               <div className="slider-imgContId">
-                <img src={Retroceder} className="slider-imgId" onClick={slideRight} alt=""/>
-                <img src={Pasar} className="slider-imgId" onClick={slideLeft} alt=""/>
+                {currentSlide >= 1 && <button onClick={slideRight} className="botonSlider"><img src={Retroceder} className="slider-imgId" alt=""/></button>}
+                {showSlideLeftButton && <button onClick={slideLeft} className="botonSlider"><img src={Pasar} className="slider-imgId" alt=""/></button>}
               </div>
             </>
             ) : (
@@ -134,7 +153,7 @@ const ProductId = () => {
               <p className="subtitleProductId">{product.subtitle}</p>
               <p className="descProductId">{product.desc}</p>
               {product.comp && product.comp.map((item) => (
-                <li key={item}>{item}</li>
+                <li key={item} className="compProductId">{item}</li>
               ))}
               <p className="priceProductId">{product.price}$</p>
               <p className="priceTwoProductId">{product.priceTwo}</p>

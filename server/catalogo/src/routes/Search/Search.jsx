@@ -19,17 +19,7 @@ const Search = () => {
   const [resultados, setResultados] = useState(products);
   const inputRef = useRef(null);
 
-  //Obtener productos
-  const peticionGet=async()=>{
-    await axios.get(`http://localhost:8080/api/products`)
-    .then(response=>{
-      setProducts(response.data);
-      setProduct(response.data);
-    }).catch(error=>{
-      console.log(error);
-    })
-  }
-
+  
   //setBusqueda y filtrar
   const handleChange=e=>{
     setBusqueda(e.target.value);
@@ -37,7 +27,7 @@ const Search = () => {
   const onClick=e=>{
     filtrar(busqueda);
   }
-
+  
   //Buscar al click Enter
   const handleKeyDown = (event) => {
     if (event.key === 'Enter') {
@@ -49,12 +39,13 @@ const Search = () => {
   //filtro de buscador
   const filtrar = (terminoBusqueda) => {
     var resultadosBusqueda=product.filter((elemento)=>{
-      if(elemento.title && elemento.title.toString().toLowerCase().includes(terminoBusqueda.toLowerCase()) || elemento.categories && elemento.categories.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())){
+      if(elemento.title && elemento.title.toString().toLowerCase().includes(terminoBusqueda.toLowerCase()) || elemento.categories && elemento.categories.toString().toLowerCase().includes(terminoBusqueda.toLowerCase()) || elemento.subtitle && elemento.subtitle.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())){
         return elemento
       }
     });
     setProducts(resultadosBusqueda);
     setResultados(resultadosBusqueda.length > 0 ? resultadosBusqueda : 'no disponible');
+    setIndice(0); // Reiniciar el valor de indice a 0
   };
   
   //Botones de Siguiente y Anterior
@@ -69,9 +60,18 @@ const Search = () => {
     }
   };
   
-  //Obtener los productos al cargar
-  useEffect(()=>{
-    peticionGet();
+  //Obtener productos
+  useEffect(() =>{
+    const peticionGet=async()=>{
+      await axios.get(`http://localhost:8080/api/products`)
+      .then(response=>{
+        setProducts(response.data);
+        setProduct(response.data);
+      }).catch(error=>{
+        console.log(error);
+      })
+    }
+    peticionGet()
   },[])
 
   //Mostrar busqueda

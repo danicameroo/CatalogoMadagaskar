@@ -5,6 +5,10 @@ import { Link } from 'react-router-dom';
 
 const Mapa = () => {
 
+  const handleClick = () => {
+    window.location.href = '/?scrollOnLoadRecomend=true';
+  };
+
     return(
         <div className='mapa'>
             <h1 className='tituloMapa'>Categorias</h1>
@@ -15,7 +19,7 @@ const Mapa = () => {
                   ))}
               </div>
               <div className='Mapa'>
-                <Link to={"/"} className='linkMapa'><h2 className='textMapRec'>Recomendaciones semanales</h2></Link>
+                <Link to={"/"} className='linkMapa'><h2 className='textMapRec' onClick={handleClick}>Recomendaciones semanales</h2></Link>
               </div>
             </div>
         </div>

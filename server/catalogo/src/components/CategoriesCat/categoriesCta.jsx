@@ -17,6 +17,7 @@ const CategoriesCat = () => {
 
   const onClick = (category) => {
     setActiveCategory(category);
+    localStorage.setItem('sliderPos', sliderPos);
   };
   
   //Desplazar categorias a la derecha o izquiera
@@ -33,6 +34,13 @@ const CategoriesCat = () => {
     slider.scrollLeft = newPos;
     setSliderPos(newPos);
   };
+
+  useEffect(() => {
+    const storedCategory = localStorage.getItem('activeCategory');
+    if (storedCategory) {
+      setActiveCategory(storedCategory);
+    }
+  }, []);
 
   useEffect(() => {
     const currentPath = location.pathname;

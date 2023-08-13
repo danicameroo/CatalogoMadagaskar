@@ -15,12 +15,17 @@ const ProductID = () => {
       }
     }, [category])
 
+    const storeScrollPosition = () =>{
+      const scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
+      localStorage.setItem('sliderPos', scrollPosition.toString());
+    }
+    
   return (
     <>
     <Banner />
     <CategoriesCat/>
     <div ref={categoriesRef} id="categoriesID" >
-      <ProductId />
+      <ProductId onClick={storeScrollPosition}/>
     </div>
     </>
   )
