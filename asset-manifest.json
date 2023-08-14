@@ -1,0 +1,42 @@
+{
+  "files": {
+    "main.css": "/CatalogoMadagaskar/static/css/main.7b7416dd.css",
+    "main.js": "/CatalogoMadagaskar/static/js/main.a66008c4.js",
+    "static/js/496.fc7109f0.chunk.js": "/CatalogoMadagaskar/static/js/496.fc7109f0.chunk.js",
+    "static/media/Banner.png": "/CatalogoMadagaskar/static/media/Banner.f496e9106dab3f6418a8.png",
+    "static/media/madagaskarLogoBordeBlanco.svg": "/CatalogoMadagaskar/static/media/madagaskarLogoBordeBlanco.3fb9e592cdd357fe979a36e3f788e1a3.svg",
+    "static/media/Retroceder.png": "/CatalogoMadagaskar/static/media/Retroceder.7b08f1b15047221358e6.png",
+    "static/media/Recomend.webp": "/CatalogoMadagaskar/static/media/Recomend.60a36f360afcf74dff4f.webp",
+    "static/media/Insanibu.ttf": "/CatalogoMadagaskar/static/media/Insanibu.b802102b84d620db4908.ttf",
+    "static/media/madagaskarLogoAColor.svg": "/CatalogoMadagaskar/static/media/madagaskarLogoAColor.5f4418dbfe7034a7c5ce095242bb53fc.svg",
+    "static/media/madagaskarLogoBlanco.svg": "/CatalogoMadagaskar/static/media/madagaskarLogoBlanco.0d329c96c3d6f25d5c5b026c3bb32b40.svg",
+    "static/media/barraLarga.svg": "/CatalogoMadagaskar/static/media/barraLarga.b00ea8455d06151cbc8da8d4d2623ab1.svg",
+    "static/media/barraBusqueda.svg": "/CatalogoMadagaskar/static/media/barraBusqueda.09c04e2a97e394c114fbef0da2a50271.svg",
+    "static/media/Arena.svg": "/CatalogoMadagaskar/static/media/Arena.27ea1f2044d8a55dcf03c660d18d8492.svg",
+    "static/media/Kennel.svg": "/CatalogoMadagaskar/static/media/Kennel.968fb9a73ee971eec70eb7f3011c72ab.svg",
+    "static/media/Cepillos.svg": "/CatalogoMadagaskar/static/media/Cepillos.3cd3f944506050853b0a95a33d3d1fa8.svg",
+    "static/media/WhatsApp.svg": "/CatalogoMadagaskar/static/media/WhatsApp.3ea89674648d5ecf889bb7d372e008a4.svg",
+    "static/media/Cama.svg": "/CatalogoMadagaskar/static/media/Cama.b4fb7827ed953cc8b744cf7298cfdfbf.svg",
+    "static/media/Instagram.svg": "/CatalogoMadagaskar/static/media/Instagram.fb6f0aec61181353a241edb402053175.svg",
+    "static/media/Perro.svg": "/CatalogoMadagaskar/static/media/Perro.06a17e05f55e6ec7ea41a9e85138a479.svg",
+    "static/media/Farmacia.svg": "/CatalogoMadagaskar/static/media/Farmacia.3fd7363e49ab743aea2b0aa917214765.svg",
+    "static/media/TikTok.svg": "/CatalogoMadagaskar/static/media/TikTok.8857b412245dfc7de135c7f16855db60.svg",
+    "static/media/Cosmeticos.svg": "/CatalogoMadagaskar/static/media/Cosmeticos.d848234eea6eb444574186b7d3b884b3.svg",
+    "static/media/Snacks.svg": "/CatalogoMadagaskar/static/media/Snacks.9530d03857413c693e17f8db14b1ff05.svg",
+    "static/media/lupa_no_encontrado.svg": "/CatalogoMadagaskar/static/media/lupa_no_encontrado.ff95930f77c6e576f7089a04c6d753c7.svg",
+    "static/media/Gato.svg": "/CatalogoMadagaskar/static/media/Gato.3cbced02e9ca9040d27966552a8ea52c.svg",
+    "static/media/Alimento.svg": "/CatalogoMadagaskar/static/media/Alimento.ac06ed6d9e2e64cbb1b74cad348dcda4.svg",
+    "static/media/Plato.svg": "/CatalogoMadagaskar/static/media/Plato.0288252abd3ed914eb26fb9dd93f1c91.svg",
+    "index.html": "/CatalogoMadagaskar/index.html",
+    "static/media/lupa.svg": "/CatalogoMadagaskar/static/media/lupa.0b0b72631d88e74cc2b86d3401644dd8.svg",
+    "static/media/Juguetes.svg": "/CatalogoMadagaskar/static/media/Juguetes.f04f10eaa8bf85ad262521f51a9bd43e.svg",
+    "static/media/botonPasar.svg": "/CatalogoMadagaskar/static/media/botonPasar.705e73188b146db9b6913e137912ba62.svg",
+    "main.7b7416dd.css.map": "/CatalogoMadagaskar/static/css/main.7b7416dd.css.map",
+    "main.a66008c4.js.map": "/CatalogoMadagaskar/static/js/main.a66008c4.js.map",
+    "496.fc7109f0.chunk.js.map": "/CatalogoMadagaskar/static/js/496.fc7109f0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7b7416dd.css",
+    "static/js/main.a66008c4.js"
+  ]
+}
