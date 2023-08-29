@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/CatalogoMadagaskar/static/css/main.7b7416dd.css",
-    "main.js": "/CatalogoMadagaskar/static/js/main.a66008c4.js",
+    "main.css": "/CatalogoMadagaskar/static/css/main.dc45039b.css",
+    "main.js": "/CatalogoMadagaskar/static/js/main.9e22f564.js",
     "static/js/496.fc7109f0.chunk.js": "/CatalogoMadagaskar/static/js/496.fc7109f0.chunk.js",
     "static/media/Banner.png": "/CatalogoMadagaskar/static/media/Banner.f496e9106dab3f6418a8.png",
     "static/media/madagaskarLogoBordeBlanco.svg": "/CatalogoMadagaskar/static/media/madagaskarLogoBordeBlanco.3fb9e592cdd357fe979a36e3f788e1a3.svg",
@@ -21,7 +21,7 @@
     "static/media/Perro.svg": "/CatalogoMadagaskar/static/media/Perro.06a17e05f55e6ec7ea41a9e85138a479.svg",
     "static/media/Farmacia.svg": "/CatalogoMadagaskar/static/media/Farmacia.3fd7363e49ab743aea2b0aa917214765.svg",
     "static/media/TikTok.svg": "/CatalogoMadagaskar/static/media/TikTok.8857b412245dfc7de135c7f16855db60.svg",
-    "static/media/Cosmeticos.svg": "/CatalogoMadagaskar/static/media/Cosmeticos.d848234eea6eb444574186b7d3b884b3.svg",
+    "static/media/Cosmeticos.svg": "/CatalogoMadagaskar/static/media/Cosmeticos.aa065379e9829c328503cae0a736e557.svg",
     "static/media/Snacks.svg": "/CatalogoMadagaskar/static/media/Snacks.9530d03857413c693e17f8db14b1ff05.svg",
     "static/media/lupa_no_encontrado.svg": "/CatalogoMadagaskar/static/media/lupa_no_encontrado.ff95930f77c6e576f7089a04c6d753c7.svg",
     "static/media/Gato.svg": "/CatalogoMadagaskar/static/media/Gato.3cbced02e9ca9040d27966552a8ea52c.svg",
@@ -31,12 +31,12 @@
     "static/media/lupa.svg": "/CatalogoMadagaskar/static/media/lupa.0b0b72631d88e74cc2b86d3401644dd8.svg",
     "static/media/Juguetes.svg": "/CatalogoMadagaskar/static/media/Juguetes.f04f10eaa8bf85ad262521f51a9bd43e.svg",
     "static/media/botonPasar.svg": "/CatalogoMadagaskar/static/media/botonPasar.705e73188b146db9b6913e137912ba62.svg",
-    "main.7b7416dd.css.map": "/CatalogoMadagaskar/static/css/main.7b7416dd.css.map",
-    "main.a66008c4.js.map": "/CatalogoMadagaskar/static/js/main.a66008c4.js.map",
+    "main.dc45039b.css.map": "/CatalogoMadagaskar/static/css/main.dc45039b.css.map",
+    "main.9e22f564.js.map": "/CatalogoMadagaskar/static/js/main.9e22f564.js.map",
     "496.fc7109f0.chunk.js.map": "/CatalogoMadagaskar/static/js/496.fc7109f0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7b7416dd.css",
-    "static/js/main.a66008c4.js"
+    "static/css/main.dc45039b.css",
+    "static/js/main.9e22f564.js"
   ]
 }
